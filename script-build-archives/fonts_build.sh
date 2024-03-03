@@ -6,7 +6,7 @@ unzip JetBrainsMono.zip
 mkdir -p ~/.config/LeiDotFile/fonts/JetBrainsMonoNerd
 mv ./*.ttf ~/.config/LeiDotFile/fonts/JetBrainsMonoNerd
 
-sudo ln -s  ~/.config/LeiDotFile/fonts/JetBrainsMonoNerd /usr/share/fonts/JetBrainsMonoNerd
+sudo ln -s  ~/.config/LeiDotFile/fonts /usr/share/fonts/LeiDotFile_fonts
 
 
 fc-cache -f
