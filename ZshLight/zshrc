@@ -1,0 +1,46 @@
+### ZSH HOME
+export ZSH=$HOME/.config/LeiDotFile/ZshLight
+### ---- history config ----------
+export HISTFILE=$ZSH/PrivateFile/zsh_history
+# How many commands zsh will load to memory.
+export HISTSIZE=10000
+# How many commands history will save on file.
+export SAVEHIST=10000
+# History won't save duplicates.
+setopt HIST_IGNORE_ALL_DUPS
+# History won't show duplicates on search.
+setopt HIST_FIND_NO_DUPS
+# fix zsh: command not found: #
+setopt INTERACTIVE_COMMENTS
+# plugins  config ========= start
+source $ZSH/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+fpath=($ZSH/plugins/zsh-completions/src $fpath)
+
+source $ZSH/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ff00ff,bg=cyan,bold,underline"
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+# plugins  config ========= end
+# simple prompt ========= start
+# %n@%m  = user@hostname
+#ZSH_NEWLINE=$'\n'
+#export PROMPT=" %F{46}%F %(?.%F{green}√.%F{red}?%?)%f  %B%F{69}%~ ${ZSH_NEWLINE} %F{46}>%f%b "
+
+export PROMPT="%F{green}%n@%F{90}%m> %F{96}%B%F{green}%~
+%(?.%F{green}>.%F{red} ?%? >)%f%F{46}%f%b "
+# simple prompt ========= end
+# ls color    ========= start
+if [ -x /usr/bin/dircolors ]; then
+        test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+        alias ls='ls --color=auto'
+fi
+# ls color    ========= end
+
+# Enable keyboard shortcuts for word navigation
+bindkey '^[[1;5C' forward-word # Ctrl+ right
+bindkey '^[[1;5D' backward-word # Ctrl+left
+
+# your  zsh config   ============================= start
+# for kitty ssh
+export TERM=xterm
+alias nvim='~/user_opt/nvim.appimage'
