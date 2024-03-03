@@ -1,0 +1,19 @@
+[global_config]
+  enabled_plugins = CustomCommandsMenu, CurrDirOpen, MavenPluginURLHandler, RunCmdOnMatchMenu, LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler
+[keybindings]
+[profiles]
+  [[default]]
+  [[lei]]
+    background_darkness = 0.91
+    background_type = transparent
+    font = JetBrainsMono Nerd Font 10
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]

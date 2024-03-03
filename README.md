@@ -3,6 +3,7 @@
 - zsh 自定义
 - neovim Nvchad + elulcao + 自定义
 - kitty vytorrennan + 自定义
+- terminator 自定义配置
 - fonts 字体ttf文件
 # 镜像
 Gitee [[延迟更新]](https://gitee.com/joyanhui/LeiDotFile)    
@@ -60,12 +61,9 @@ bash ~/tmp_LeiDotFile/bash.sh
 cd ~/tmp_LeiDotFile/cache
 echo "ZshLight" >  .git/info/sparse-checkout
 git pull origin main:
-# 备份以及 复制到.config 并ln对应文件
-# 复制到 ~/.config/LeiDotFile/
+
 cp -r ./ZshLight ~/.config/LeiDotFile/ZshLight
-# 备份原来的zshrc
 mv  ~/.zshrc ~/.zshrc_bak
-# 移动到 ~/.config/LeiPrivateFile/ 单独管理 这步非必需
 mv ~/.zsh_history ~/.config/LeiPrivateFile/zsh_history
 mv ~/.bash_history ~/.config/LeiPrivateFile/bash_history
 mv ~/.bashrc ~/.config/LeiPrivateFile/bashrc
@@ -76,6 +74,29 @@ ln -s ~/.config/LeiDotFile/ZshLight/zshrc  ~/.zshrc
 ```
 </details>
 
+### fcitx5
+<details>
+<summary> bash</summary>
+
+```bash
+bash ~/tmp_LeiDotFile/bash.sh
+cd ~/tmp_LeiDotFile/cache
+echo "fcitx5" >  .git/info/sparse-checkout
+git pull origin main:
+
+cp -r ./fcitx5 ~/.config/LeiDotFile/fcitx5
+rm ~/.config/fcitx5/conf
+ln -s ~/.config/LeiDotFile/fcitx5/conf ~/.config/fcitx5/conf
+rm -rf ~/.local/share/fcitx5/pinyin/dictionaries
+ln -s  ~/.config/LeiDotFile/fcitx5/dictionaries  ~/.local/share/fcitx5/pinyin/dictionaries
+# 按需处理用户词典
+rm  ~/.local/share/fcitx5/pinyin/user.dict
+ln -s ~/.config/LeiPrivateFile/fcitx5/user.dict ~/.local/share/fcitx5/pinyin/user.dict
+rm  ~/.local/share/fcitx5/pinyin/user.history
+ln -s ~/.config/LeiPrivateFile/fcitx5/user.history ~/.local/share/fcitx5/pinyin/user.history
+
+```
+</details>
 ### kitty 安装步骤
 <details>
 <summary> bash</summary>
