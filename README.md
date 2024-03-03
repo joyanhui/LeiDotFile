@@ -122,6 +122,7 @@ cp -r ./nvim ~/.config/LeiDotFile/nvim
 
 ln -s ~/.config/LeiDotFile/nvim/NvChad ~/.config/nvim
 ln -s  ~/.config/LeiDotFile/nvim/NvChad-custom ~/.config/nvim/lua/custom
-
+# 科学环境手动运行一次 nvim 因为需要安装插件依赖 或者 直接拉取
+nvim
 ```
 </details>
