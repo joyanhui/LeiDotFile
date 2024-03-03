@@ -106,14 +106,29 @@ bash ~/tmp_LeiDotFile/bash.sh
 cd ~/tmp_LeiDotFile/cache
 echo "kitty" >  .git/info/sparse-checkout
 git pull origin main:
-# 备份以及 复制到.config 并ln对应文件
-# 复制到 ~/.config/LeiDotFile/
+
 cp -r ./kitty ~/.config/LeiDotFile/kitty
-# 备份原来kitty
 mv ~/.config/kitty ~/.config/kitty_bak
 ln -s ~/.config/LeiDotFile/kitty ~/.config/kitty
 ```
 </details>
+
+### terminator 安装步骤
+<details>
+<summary> bash</summary>
+
+```bash
+bash ~/tmp_LeiDotFile/bash.sh
+cd ~/tmp_LeiDotFile/cache
+echo "terminator" >  .git/info/sparse-checkout
+git pull origin main:
+# 复制到 ~/.config/LeiDotFile/
+cp -r ./terminator ~/.config/LeiDotFile/terminator
+mv ~/.config/terminator ~/.config/terminator_bak
+ln -s ~/.config/LeiDotFile/terminator ~/.config/terminator
+```
+</details>
+
 
 ### neovim 安装步骤
 <details>
