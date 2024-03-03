@@ -1,7 +1,7 @@
 ### ZSH HOME
 export ZSH=$HOME/.config/LeiDotFile/ZshLight
 ### ---- history config ----------
-export HISTFILE=$ZSH/PrivateFile/zsh_history
+export HISTFILE=$HOME/LeiPrivateFile/zsh_history
 # How many commands zsh will load to memory.
 export HISTSIZE=10000
 # How many commands history will save on file.
