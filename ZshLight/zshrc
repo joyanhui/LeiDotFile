@@ -12,6 +12,18 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_FIND_NO_DUPS
 # fix zsh: command not found: #
 setopt INTERACTIVE_COMMENTS
+# 自动加载补全系统  ================================= start
+autoload -Uz compinit
+compinit
+# 启用大小写自动修正
+setopt correct
+compinit
+# 启用大小写自动修正
+setopt correct
+# 设置补全系统对大小写不敏感
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+# 自动加载补全系统  ================================= end
+
 # plugins  config ========= start
 source $ZSH/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 fpath=($ZSH/plugins/zsh-completions/src $fpath)
