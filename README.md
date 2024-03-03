@@ -5,12 +5,13 @@
 - kitty vytorrennan + 自定义
 - fonts 字体ttf文件
 # 镜像
-gitee [[延迟更新]](https://gitee.com/joyanhui/LeiDotFile)    
-github [[最新版本]](https://github.com/joyanhui/LeiDotFile)
+Gitee [[延迟更新]](https://gitee.com/joyanhui/LeiDotFile)    
+GitHub [[最新版本]](https://github.com/joyanhui/LeiDotFile)
 # 安装步骤
 可以按需安装 步骤： 在一个临时目录按需pull,然后单独处理对应的dot file。   
 需要 `git --version`>=2.5 `bash/sh/zsh` 后面的脚本不完全兼容fish
-## 临时目录
+## 按需安装
+### 临时目录
 <details>
 <summary> bash</summary>
 
@@ -32,7 +33,7 @@ EOF
 ```
 </details>
 
-## 字体安装步骤
+### 字体安装步骤
 zsh和nvim需要里面的JetBrainsMonoNerd字体，不然比较难看
 <details>
 <summary> bash</summary>
@@ -50,7 +51,7 @@ fc-cache -f
 ```
 </details> 
 
-## zsh 安装步骤
+### zsh 安装步骤
 <details>
 <summary> bash</summary>
 
@@ -75,7 +76,7 @@ ln -s ~/.config/LeiDotFile/ZshLight/zshrc  ~/.zshrc
 ```
 </details>
 
-## kitty 安装步骤
+### kitty 安装步骤
 <details>
 <summary> bash</summary>
 
