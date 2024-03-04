@@ -67,12 +67,14 @@ fun_do_zsh_ln() {
 fun_do_fonts_backup() {
   echo "备份原来 LeiDotFile_fonts 如果文件不存在可能会报错，不影响"
   echo "需要sudo权限 操作 /usr/share/fonts/目录"
-  sudo mv /usr/share/fonts/LeiDotFile_fonts "$BackupDir"/LeiDotFile_fonts
+  sudo mv /usr/share/fonts/Lei_JetBrainsMonoNerd "$BackupDir"/Lei_font_JetBrainsMonoNerd
+  sudo mv /usr/share/fonts/Lei_WindowsFonts "$BackupDir"/Lei_font_WindowsFonts
 }
 fun_do_fonts_ln(){
   echo "需要sudo权限 操作 /usr/share/fonts/目录"
-  sudo ln -s  ~/.config/LeiDotFile/fonts /usr/share/fonts/LeiDotFile_fonts
-  echo "正在更新字体缓存"
+  sudo ln -s  ~/.config/LeiDotFile/fonts/JetBrainsMonoNerd /usr/share/fonts/Lei_JetBrainsMonoNerd
+  sudo ln -s  ~/.config/LeiDotFile/fonts/WindowsFonts /usr/share/fonts/Lei_WindowsFonts
+  echo "正在更新字体缓存 fc-cache -f"
   fc-cache -f
 }
 # fonts     =============== end
@@ -167,6 +169,35 @@ else
               ;;
       esac
   done
+  git pull origin main:
+  cp $Git_tmp/cache ~/.config/LeiDotFile
+  for s in $input_array
+    do
+        case "$s" in
+          fcitx5)
+            fun_do_fcitx5_ln
+            ;;
+          fonts)
+            fun_do_fonts_ln
+            ;;
+          kitty)
+              fun_do_kitty_ln
+              ;;
+          nvim)
+              fun_do_nvim_ln
+              ;;
+          terminator)
+              fun_do_terminator_ln
+              ;;
+          zsh)
+              fun_do_zsh_ln
+              ;;
+          *)
+              echo "无效选项：$s"
+              ;;
+      esac
+  done
+
 
 fi
 
