@@ -13,7 +13,7 @@ fi
 #echo "准备备份目录和git地址  ========= end"
 
 
-echo "默认安装到 ～/.config/LeiDotFile"
+echo "默认安装到 ~/.config/LeiDotFile"
 echo "就的配置文件会备份到 $BackupDir"
 echo "使用git下载，地址为 $GitUrl"
 echo ""
