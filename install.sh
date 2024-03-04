@@ -20,7 +20,7 @@ echo ""
 echo "请选择你要启用的功能"
 echo "可选  fcitx5 fonts kitty nvim terminator zsh"
 echo "全部 启用输入 all"
-echo "请输入逗号分隔的字符串（例如：kitty,zsh）："
+echo "请输入要启用的模块用英文逗号或者空格分割(like: fcitx5,fonts,kitty,nvim,terminator,zsh)"
 # shellcheck disable=SC2162
 read input_string
 
@@ -163,7 +163,6 @@ else
               echo "ZshLight" >>  .git/info/sparse-checkout
               ;;
           *)
-              # 默认情况（如果输入不是1、2或3）
               echo "无效选项：$s"
               ;;
       esac
