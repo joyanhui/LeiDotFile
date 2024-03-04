@@ -1,5 +1,6 @@
 # dotFile
-
+> 配置文件目录 ~/.config/LeiDotFile，然后使用软连接到对应位置   
+> 私密文件到目录 ~/.config/LeiPrivateFile/ 也使用端连接到对应位置
 - zsh 自定义
 - neovim Nvchad + elulcao + 自定义
 - kitty vytorrennan + 自定义
@@ -9,9 +10,13 @@
 Gitee [[延迟更新]](https://gitee.com/joyanhui/LeiDotFile)    
 GitHub [[最新版本]](https://github.com/joyanhui/LeiDotFile)
 # 安装步骤
-可以按需安装 步骤： 在一个临时目录按需pull,然后单独处理对应的dot file。   
-需要 `git --version`>=2.5 `bash/sh/zsh` 后面的脚本不完全兼容fish
+ 
+## 全量安装
+
 ## 按需安装
+可以按需安装 步骤： 在一个临时目录按需pull,然后单独处理对应的dot file。   
+需要 `git --version`>=2.5 `bash/sh/zsh` 后面的脚本不完全兼容fish。
+不再维护了，因为太麻烦了。
 ### 临时目录
 <details>
 <summary> bash</summary>
@@ -97,6 +102,7 @@ ln -s ~/.config/LeiPrivateFile/fcitx5/user.history ~/.local/share/fcitx5/pinyin/
 
 ```
 </details>
+
 ### kitty 安装步骤
 <details>
 <summary> bash</summary>

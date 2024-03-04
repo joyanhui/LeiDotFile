@@ -12,15 +12,19 @@ chmod +x  ~/user_opt/nvim.appimage
 rm -rf ~/.cache/nvim ~/.local/share/nvim/ ~/.config/nvim  ~/.config/nvim-NvChad-custom
 rm -rf ~/.config/LeiDotFile/nvim/NvChad ~/.config/LeiDotFile/nvim/NvChad-custom
 
-git clone https://github.com/NvChad/NvChad  ~/.config/LeiDotFile/nvim/NvChad  --depth 1
+git clone https://github.com/NvChad/NvChad  /misc/nvme/yh/workspace/LeiDotFile/nvim/NvChad   --depth 1
+rm -rf /misc/nvme/yh/workspace/LeiDotFile/nvim/NvChad/.git*
 ln -s ~/.config/LeiDotFile/nvim/NvChad ~/.config/nvim
-rm -rf ~/.config/LeiDotFile/nvim/NvChad/.git*
+
 
 rm -rf  ~/.config/LeiDotFile/nvim/NvChad/lua/custom
-git clone https://github.com/joyanhui/nvim-NvChad-custom.git  ~/.config/LeiDotFile/nvim/NvChad-custom  --depth 1
+git clone https://github.com/joyanhui/nvim-NvChad-custom.git  /misc/nvme/yh/workspace/LeiDotFile/nvim/NvChad-custom  --depth 1
 
+rm -rf /misc/nvme/yh/workspace/LeiDotFile/nvim/NvChad-custom/.git/
+rm -rf /misc/nvme/yh/workspace/LeiDotFile/nvim/NvChad-custom/.vscode/
 
 ln -s  ~/.config/LeiDotFile/nvim/NvChad-custom ~/.config/nvim/lua/custom
+
 rm -rf ~/.config/LeiDotFile/nvim/NvChad-custom/.git*
 rm -rf ~/.config/LeiDotFile/nvim/NvChad-custom/.vscode
 

@@ -1,1 +1,1 @@
-fcitx5配置文件和通用字典，用户字典放到PrivateFile
+fcitx5配置文件和通用字典，用户字典放到 ~/.config/LeiPrivateFile/
